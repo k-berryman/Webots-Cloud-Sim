@@ -1,0 +1,105 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.18911857919161448 0.3374196323985292 -0.922161674912044 1.0922471710130883
+  position 2.8814014601857596 2.0008059726954857 0.9951382473754096
+  followType "None"
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  texture "empty_office"
+}
+Floor {
+  translation 4 0 0
+  name "floor(2)"
+  size 1 1.75
+}
+Ned {
+  translation 4.37242 0.503432 0
+  rotation 0 0 -1 -5.307179586466759e-06
+}
+Ned {
+  translation 3.87242 0.753432 0
+  rotation 0 0 1 1.5708
+  name "Ned(2)"
+}
+Ned {
+  translation 3.87803 -0.0010377 0
+  rotation 0 0 1 1.5708
+  name "Ned(1)"
+}
+DEF NedBox SolidBox {
+  translation 4.36984 0.776261 0.00999523234
+  rotation -1.8608612400339144e-12 1.0018816679761971e-11 0.9999999999999999 3.1515900001607636e-06
+  name "NedBox(3)"
+  size 0.03 0.015 0.02
+  appearance PBRAppearance {
+    baseColor 0.8 0.2 1
+    roughness 0.5
+    metalness 0
+  }
+  physics Physics {
+    density 2700
+    damping Damping {
+      linear 0
+      angular 0
+    }
+  }
+}
+DEF NedBox SolidBox {
+  translation 3.60984 0.756261 0.009995232340000004
+  rotation -1.6455595532429963e-17 4.465710846520625e-17 1 1.5708000000000004
+  name "NedBox(4)"
+  size 0.03 0.015 0.02
+  appearance PBRAppearance {
+    baseColor 1 0 0
+    roughness 0.5
+    metalness 0
+  }
+  physics Physics {
+    density 2700
+    damping Damping {
+      linear 0
+      angular 0
+    }
+  }
+}
+ConveyorBelt {
+  translation 3.876 -0.25 0
+  rotation 0 0 1 -1.5707953071795862
+  size 0.245 0.245 0.05
+  borderThickness 0.003
+  borderHeight -0.01
+  speed 0.2
+}
+ConveyorBelt {
+  translation 3.876 -0.5 0
+  rotation 0 0 1 -1.5707953071795862
+  name "conveyor belt(1)"
+  size 0.245 0.245 0.05
+  borderThickness 0.003
+  borderHeight -0.01
+  speed 0.2
+}
+SquareManhole {
+  translation 3.625 0 0.005
+  size 0.25 0.25 0.01
+}
+SquareManhole {
+  translation 3.875 -0.75 0.012
+  name "manhole(1)"
+  size 0.25 0.25 0.025
+}
+Robot {
+  translation 3.21 0 0
+  controller "sample_supervisor"
+  supervisor TRUE
+}
+Khepera1 {
+  translation 4.12 0.5 0
+  scale 4 4 4
+}
