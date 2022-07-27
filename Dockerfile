@@ -1,5 +1,5 @@
-FROM cyberbotics/webots.cloud:R2022a
-ARG ~/Desktop/webots-cloud
+FROM cyberbotics/webots.cloud:R2022b
+ARG PROJECT_PATH
 RUN mkdir -p $PROJECT_PATH
-COPY . ~/Desktop/webots-cloud
-RUN cd ~/Desktop/webots-cloud/plugins/robot_windows/ned && make clean && make
+COPY . $PROJECT_PATH
+RUN cd $PROJECT_PATH/plugins/robot_windows/simple_e-puck && make clean && make
